@@ -11,7 +11,15 @@ import (
 	"github.com/hermo/registry-check/pkg/presentation/text"
 )
 
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+)
+
 func usage() {
+
+	fmt.Printf("registry-check %s, commit %s, built at %s\n", version, commit, date)
 	fmt.Printf("registry-check provides a list of registry URLs used in a given NPM or Composer lockfile in text or JSON format.\n\n")
 	fmt.Printf("USAGE:\n  registry-check [OPTIONS] LOCKFILE\n\n")
 	fmt.Printf("ARGS:\n  <LOCKFILE>   package-lock.json or composer.lock file.\n\n")
